@@ -21,17 +21,17 @@ let selectedClusterIndexForDeletion = -1;
 
 // 食品リスト
 let foodList = [
-    { name: "gyoza", label: "餃子", imgSrc: "https://frozenfoodpress.com/wp-content/uploads/2018/06/4c913c8dc502ecd4682d9b2ce0ee6e9f-e1529890604890.jpeg", info: "油・水なしで、誰が調理しても簡単にパリッパリの羽根ができる、うす皮パリッと、ジューシーで具がギュッと詰まった焼き餃子です。\n誰もが好きな、間違いない安定感のある王道のおいしさです。\n国産のお肉と野菜を使用しています。\n【内容量】12個入り（276g）" },
-    { name: "chahan", label: "チャーハン", imgSrc: "https://www.ffa.ajinomoto.com/_var/images/products/97/65cae64b3ce70.png?resize=1200x630", info: "焦がしにんにくのマー油と葱油の香ばしさや、噛むほどに広がる焼豚のうま味で、一度口にすると一心不乱に食べきってしまいたくなるチャーハンです。\n焦がしにんにくの香りを引き立たせ、焼豚の風味も調整し、メリハリのある味を実現。\nどんどん食べ進めたくなる味に進化しました。\n【内容量】580g" },
-    { name: "empanada", label: "エンパナーダ", imgSrc: "https://m.media-amazon.com/images/I/51HpEz7bykL.jpg_BO30,255,255,255_UF900,850_SR1910,1000,0,C_QL100_.jpg", info: "アルゼンチン伝統料理：本場の味わいを楽しめるエンパナーダの6個セット。南米の伝統的な味を日本で堪能できます。\n食べ比べセット：シェフが厳選した６種類のエンパナーダを一度に楽しめる贅沢な詰め合わせパック" },
-    { name: "gratin", label: "グラタン", imgSrc: "https://static.nichireifoods.co.jp/wp/wp-content/uploads/2021/09/sho_id100.png", info: "蔵王産ミルクを使用。チーズのおいしさとプリプリのえびがマッチしたグラタンです。\nチーズの風味豊かに！チーズを感じられるようカットサイズにもこだわっています。" },
+    { name: "gyoza", label: "餃子", imgSrc: "4c913c8dc502ecd4682d9b2ce0ee6e9f-e1529890604890.jpeg", info: "油・水なしで、誰が調理しても簡単にパリッパリの羽根ができる、うす皮パリッと、ジューシーで具がギュッと詰まった焼き餃子です。\n誰もが好きな、間違いない安定感のある王道のおいしさです。\n国産のお肉と野菜を使用しています。\n【内容量】12個入り（276g）" },
+    { name: "chahan", label: "チャーハン", imgSrc: "65cae64b3ce70.png", info: "焦がしにんにくのマー油と葱油の香ばしさや、噛むほどに広がる焼豚のうま味で、一度口にすると一心不乱に食べきってしまいたくなるチャーハンです。\n焦がしにんにくの香りを引き立たせ、焼豚の風味も調整し、メリハリのある味を実現。\nどんどん食べ進めたくなる味に進化しました。\n【内容量】580g" },
+    { name: "empanada", label: "エンパナーダ", imgSrc: "51HpEz7bykL.jpg_BO30,255,255,255_UF900,850_SR1910,1000,0,C_QL100_.jpg", info: "アルゼンチン伝統料理：本場の味わいを楽しめるエンパナーダの6個セット。南米の伝統的な味を日本で堪能できます。\n食べ比べセット：シェフが厳選した６種類のエンパナーダを一度に楽しめる贅沢な詰め合わせパック" },
+    { name: "gratin", label: "グラタン", imgSrc: "sho_id100.png", info: "蔵王産ミルクを使用。チーズのおいしさとプリプリのえびがマッチしたグラタンです。\nチーズの風味豊かに！チーズを感じられるようカットサイズにもこだわっています。" },
     { name: "ravioli", label: "ラビオリ", imgSrc: "https://greenbeans.com/images-v3/89edeb69-fe10-49ca-baab-5c51900239b9/d8e55ff4-df47-411b-bad7-e6ba56090dcd/1280x1280.webp", info: "爽やかな風味のリコッタチーズとほうれん草をパスタ生地で包みトマトソースで和えたラビオリです。リコッタのマイルドな味わいとトマトソースの相性は抜群、さらにチーズをトッピングし風味豊かに仕上げました。" },
     { name: "australian_meatpie", label: "オーストラリアンミートパイ", imgSrc: "https://storage.aeonshop.com/assets/img/products/3/5904891501521.jpg", info: "チーズ風味が香るミートソースは、100%オージービーフを使用しています。家族や友達、みんなで楽しめる6個入りパックです。\nパイ生地は、フタ部分と下のパイで2種類の異なるパイ生地を使用しています。\n特に上のフタになっているパイはサクサクに仕上げているので、なかのトロっとしたソースとの絶妙なコンビネーションを楽しめます。" },
-    { name: "ravioli", label: "ラビオリ", imgSrc: "https://www.eatwell101.com/wp-content/uploads/2022/02/mushroom-ravioli-recipe.jpg", info: "小麦粉を練って作ったパスタ生地の間に、ひき肉や野菜、チーズなどの具材を詰めたイタリア料理。\n様々なソースと組み合わせて楽しまれます。" },
-    { name: "yakionigiri", label: "焼きおにぎり", imgSrc: "https://m.media-amazon.com/images/I/71+s1Tix9qL.jpg", info: "香りを立たせ、持続させるニッスイの独自技術「香りのＷアップ製法」で、しょうゆの風味と香りをより引き立たせました。\nたまりしょうゆと二段仕込みしょうゆをブレンドした、まろやかでコクのあるしょうゆの風味豊かな焼きおにぎりです。" },
-    { name: "reitou_udon", label: "冷凍うどん", imgSrc: "https://www.tablemark.co.jp/products/frozen/udon/detail/__icsFiles/afieldfile/2016/07/08/7116302.jpg", info: "強いコシと弾力のさぬきうどんに、瀬戸内産いりこを使用しただし香るまろやかでコクのあるつゆ。麺はこだわりの包丁切りで、つゆとの絡みも良くお召し上がりいただけます。" },
-    { name: "reitou_pasta", label: "冷凍パスタ", imgSrc: "https://www.nippn.co.jp/products/frozen/ohmy_premium/detail/__icsFiles/afieldfile/2025/02/14/op_bolognese.jpg", info: "牛挽肉の旨みと赤ワインの風味が特長のボロネーゼソース。ゴーダチーズとごろっと大きな揚げなすをトッピング。" },
-    { name: "karaage", label: "鶏のから揚げ", imgSrc: "https://www.ffa.ajinomoto.com/_var/images/products/345/65a665121d4b5.png?resize=1200x630", info: "食欲を満たす肉の塊、これぞから揚げの金字塔！\nにんにく風味アップでさらに白飯がガツガツ進む！\n秘伝にんにく油、葱油、特級醤油の極旨仕込みだれにじっくり漬け込んだ香りがクセになるから揚げです。\n火入れの温度にこだわった”秘伝にんにく油”でにんにくの香りが引き立ち、肉汁がジュワッと広がります。" };
+    { name: "ravioli", label: "ラビオリ", imgSrc: "1280x1280.webp", info: "小麦粉を練って作ったパスタ生地の間に、ひき肉や野菜、チーズなどの具材を詰めたイタリア料理。\n様々なソースと組み合わせて楽しまれます。" },
+    { name: "yakionigiri", label: "焼きおにぎり", imgSrc: "71+s1Tix9qL.jpg", info: "香りを立たせ、持続させるニッスイの独自技術「香りのＷアップ製法」で、しょうゆの風味と香りをより引き立たせました。\nたまりしょうゆと二段仕込みしょうゆをブレンドした、まろやかでコクのあるしょうゆの風味豊かな焼きおにぎりです。" },
+    { name: "reitou_udon", label: "冷凍うどん", imgSrc: "7116302.jpg", info: "強いコシと弾力のさぬきうどんに、瀬戸内産いりこを使用しただし香るまろやかでコクのあるつゆ。麺はこだわりの包丁切りで、つゆとの絡みも良くお召し上がりいただけます。" },
+    { name: "reitou_pasta", label: "冷凍パスタ", imgSrc: "op_bolognese.jpg", info: "牛挽肉の旨みと赤ワインの風味が特長のボロネーゼソース。ゴーダチーズとごろっと大きな揚げなすをトッピング。" },
+    { name: "karaage", label: "鶏のから揚げ", imgSrc: "65a665121d4b5.png", info: "食欲を満たす肉の塊、これぞから揚げの金字塔！\nにんにく風味アップでさらに白飯がガツガツ進む！\n秘伝にんにく油、葱油、特級醤油の極旨仕込みだれにじっくり漬け込んだ香りがクセになるから揚げです。\n火入れの温度にこだわった”秘伝にんにく油”でにんにくの香りが引き立ち、肉汁がジュワッと広がります。" };
 
 function getCurrentTimestamp() {
     if (!experimentData.startTime) return 0;
